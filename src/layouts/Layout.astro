@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Candy Factory Coworking | Premier Coworking & Private Offices in Denver, CO",
+  description = "Discover Denver's sweetest coworking space in the historic Baur's building. Flexible hot desks, dedicated desks, private office suites & event rentals. Claim your free 1-day pass today!"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href="https://candyfactorycoworking.com/" />
+  <link rel="icon" type="image/png" href="https://candyfactorycoworking.com/wp-content/uploads/2020/03/Favicon-1.png" />
+
+  <!-- OpenGraph Tags -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://candyfactorycoworking.com/wp-content/uploads/2025/11/2nd-floor-main-room-scaled.jpg" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <slot />
+</body>
+</html>

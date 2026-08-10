@@ -1,0 +1,219 @@
+---
+---
+<!-- TOUR BOOKING MODAL OVERLAY -->
+<div class="modal-overlay" id="tour-modal">
+  <div class="modal-card">
+    <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal"><i class="fas fa-times"></i></button>
+    
+    <div style="text-align: center; margin-bottom: 1.5rem;">
+      <div class="badge-tag badge-red" style="margin-bottom: 0.5rem;">Book A Tour</div>
+      <h3 class="heading-md">Visit Candy Factory Coworking</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Pick a date to view our historic space and meet our team.</p>
+    </div>
+
+    <form id="modal-tour-form">
+      <div class="form-group">
+        <label class="form-label" for="modal-name">Your Full Name *</label>
+        <input type="text" id="modal-name" class="form-control" placeholder="Alex Morgan" required />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="modal-email">Email Address *</label>
+        <input type="email" id="modal-email" class="form-control" placeholder="alex@company.com" required />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="modal-space-select">Interested Space</label>
+          <select id="modal-space-select" class="form-control">
+            <option value="General Coworking">General Coworking</option>
+            <option value="Day Pass">Day Pass</option>
+            <option value="Dedicated Desk">Dedicated Desk</option>
+            <option value="Private Office">Private Office Suite</option>
+            <option value="Small Conference Room">Small Meeting Room</option>
+            <option value="Large Conference Room">Large Meeting Room</option>
+            <option value="Event Space">Corporate Event Space</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="modal-date">Preferred Date</label>
+          <input type="date" id="modal-date" class="form-control" required />
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1rem;">
+        Confirm Tour Booking <i class="fas fa-calendar-check"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- FLOATING MOBILE QUICK BAR -->
+<div class="floating-mobile-bar">
+  <div class="floating-bar-content">
+    <div>
+      <div style="font-weight: 800; font-size: 0.95rem; color: var(--dark-navy);">Candy Factory</div>
+      <div style="font-size: 0.78rem; color: var(--primary-red);">1-Day Free Pass Available</div>
+    </div>
+    <button class="btn btn-primary btn-sm" data-open-modal="Mobile Bar">Book Tour</button>
+  </div>
+</div>
+
+<style>
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 33, 57, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: #FFFFFF;
+  border-radius: var(--border-radius-lg);
+  width: 90%;
+  max-width: 580px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  transform: translateY(20px);
+  transition: transform var(--transition-normal);
+}
+
+.modal-overlay.active .modal-card {
+  transform: translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  color: var(--primary-red);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin-bottom: 0.4rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: var(--border-radius-sm);
+  border: 1.5px solid var(--border-light);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: #F8FAFC;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.floating-mobile-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-light);
+  padding: 0.8rem 1.2rem;
+  z-index: 999;
+  display: none;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.floating-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .floating-mobile-bar {
+    display: block;
+  }
+}
+</style>
+
+<script>
+  const modalOverlay = document.getElementById('tour-modal');
+  const closeBtn = document.getElementById('modal-close-btn');
+
+  function openModal(space = 'General Coworking') {
+    const spaceSelect = document.getElementById('modal-space-select') as HTMLSelectElement | null;
+    if (spaceSelect && space) spaceSelect.value = space;
+    modalOverlay?.classList.add('active');
+  }
+
+  function closeModal() {
+    modalOverlay?.classList.remove('active');
+  }
+
+  closeBtn?.addEventListener('click', closeModal);
+  modalOverlay?.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) closeModal();
+  });
+
+  document.querySelectorAll('[data-open-modal]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const space = btn.getAttribute('data-open-modal') || 'General Coworking';
+      openModal(space);
+    });
+  });
+
+  const modalForm = document.getElementById('modal-tour-form');
+  if (modalForm) {
+    modalForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = modalForm.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Scheduling Tour...';
+      }
+
+      setTimeout(() => {
+        closeModal();
+        alert('✅ Tour Scheduled! We will confirm your visit shortly.');
+        (modalForm as HTMLFormElement).reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Confirm Tour Booking <i class="fas fa-calendar-check"></i>';
+        }
+      }, 1200);
+    });
+  }
+</script>

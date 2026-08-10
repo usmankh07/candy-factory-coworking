@@ -1,0 +1,274 @@
+/* ==========================================================================
+   CANDY FACTORY COWORKING - ASTRO GLOBAL DESIGN SYSTEM & STYLES
+   Brand Colors:
+   - Primary Accent Red/Pink: #D64050
+   - Secondary Accent Teal:   #7EBEC5 / #82C0C7
+   - Deep Slate Navy:          #012139
+   - Neutrals:                #FFFFFF, #F8F9FC, #0F172A
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary-red: #D64050;
+  --primary-red-hover: #BE3242;
+  --primary-red-light: rgba(214, 64, 80, 0.08);
+  --primary-red-glow: rgba(214, 64, 80, 0.25);
+  
+  --secondary-teal: #7EBEC5;
+  --secondary-teal-hover: #5DA7AF;
+  --secondary-teal-light: rgba(126, 190, 197, 0.12);
+
+  --dark-navy: #012139;
+  --dark-navy-surface: #072B47;
+  --dark-navy-card: #0E3656;
+  --dark-navy-border: rgba(255, 255, 255, 0.1);
+
+  --bg-light: #F8F9FC;
+  --bg-white: #FFFFFF;
+  --bg-dark: #012139;
+
+  --text-dark: #0F172A;
+  --text-muted: #64748B;
+  --text-light: #F8FAFC;
+  --text-dim: #94A3B8;
+
+  --border-light: #E2E8F0;
+  --border-radius-sm: 8px;
+  --border-radius-md: 14px;
+  --border-radius-lg: 24px;
+  --border-radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(1, 33, 57, 0.06);
+  --shadow-md: 0 10px 30px rgba(1, 33, 57, 0.08);
+  --shadow-lg: 0 20px 40px rgba(1, 33, 57, 0.14);
+  --shadow-red: 0 8px 25px rgba(214, 64, 80, 0.3);
+
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Reset & Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Typography Utility */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.heading-xl {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.heading-lg {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+.heading-md {
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  font-weight: 700;
+}
+
+.heading-sm {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.text-gradient-red {
+  background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B7D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-teal {
+  background: linear-gradient(135deg, var(--secondary-teal) 0%, #29B6F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.badge-red {
+  background-color: var(--primary-red-light);
+  color: var(--primary-red);
+  border: 1px solid rgba(214, 64, 80, 0.2);
+}
+
+.badge-teal {
+  background-color: var(--secondary-teal-light);
+  color: #1565C0;
+  border: 1px solid rgba(126, 190, 197, 0.3);
+}
+
+/* Button Components */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-normal);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-red) 0%, #C02B0A 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-red);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(214, 64, 80, 0.45);
+  background: linear-gradient(135deg, #E24A5C 0%, #D64050 100%);
+}
+
+.btn-secondary {
+  background: var(--dark-navy);
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background: var(--dark-navy-surface);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--dark-navy);
+  border: 2px solid var(--dark-navy);
+}
+
+.btn-outline:hover {
+  background: var(--dark-navy);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-teal {
+  background: var(--secondary-teal);
+  color: var(--dark-navy);
+  font-weight: 800;
+}
+
+.btn-teal:hover {
+  background: var(--secondary-teal-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(126, 190, 197, 0.4);
+}
+
+.btn-lg {
+  padding: 1.1rem 2.2rem;
+  font-size: 1.05rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-bg-white {
+  background-color: var(--bg-white);
+}
+
+.section-bg-light {
+  background-color: var(--bg-light);
+}
+
+.section-bg-dark {
+  background-color: var(--dark-navy);
+  color: #FFFFFF;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
+}
+
+.section-bg-dark .section-header p {
+  color: var(--text-dim);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

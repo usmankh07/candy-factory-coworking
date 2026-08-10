@@ -1,0 +1,449 @@
+---
+---
+<section class="section transportation-section" id="location">
+  <div class="container">
+    
+    <div class="section-header">
+      <h2 class="heading-lg title-with-underline">TRANSPORTATION</h2>
+      <p>Conveniently located in the Denver Theatre District & CBD with direct light rail, shuttle, and airport transit access.</p>
+    </div>
+
+    <div class="transport-box">
+      
+      <!-- TRANSIT / SUBWAY SUB-SECTION -->
+      <div class="transport-group">
+        <h3 class="group-subtitle"><i class="fas fa-train-subway"></i> TRANSIT / LIGHT RAIL STATIONS</h3>
+
+        <div class="transport-grid-2col">
+          <!-- Station 1: 16th-Stout -->
+          <div class="transport-row station-card" data-lines="D,F,H">
+            <div class="location-info">
+              <div class="location-name">
+                <i class="fas fa-location-dot"></i>
+                <span>16th-Stout Station</span>
+              </div>
+              <div class="station-line-tags">
+                <span class="mini-tag tag-d">D</span>
+                <span class="mini-tag tag-f">F</span>
+                <span class="mini-tag tag-h">H</span>
+              </div>
+            </div>
+            <div class="location-details">
+              <span class="detail-pill"><i class="fas fa-person-walking"></i> 4 min. walk</span>
+              <span class="detail-distance">0.7 mi</span>
+            </div>
+          </div>
+
+          <!-- Station 2: 18th-California -->
+          <div class="transport-row station-card" data-lines="D,F,H">
+            <div class="location-info">
+              <div class="location-name">
+                <i class="fas fa-location-dot"></i>
+                <span>18th-California Station</span>
+              </div>
+              <div class="station-line-tags">
+                <span class="mini-tag tag-d">D</span>
+                <span class="mini-tag tag-f">F</span>
+                <span class="mini-tag tag-h">H</span>
+              </div>
+            </div>
+            <div class="location-details">
+              <span class="detail-pill"><i class="fas fa-person-walking"></i> 8 min. walk</span>
+              <span class="detail-distance">0.6 mi</span>
+            </div>
+          </div>
+
+          <!-- Station 3: 16th-California -->
+          <div class="transport-row station-card" data-lines="D,F,H">
+            <div class="location-info">
+              <div class="location-name">
+                <i class="fas fa-location-dot"></i>
+                <span>16th-California Station</span>
+              </div>
+              <div class="station-line-tags">
+                <span class="mini-tag tag-d">D</span>
+                <span class="mini-tag tag-f">F</span>
+                <span class="mini-tag tag-h">H</span>
+              </div>
+            </div>
+            <div class="location-details">
+              <span class="detail-pill"><i class="fas fa-person-walking"></i> 4 min. walk</span>
+              <span class="detail-distance">0.5 mi</span>
+            </div>
+          </div>
+
+          <!-- Station 4: 18th-Stout -->
+          <div class="transport-row station-card" data-lines="D,F,H">
+            <div class="location-info">
+              <div class="location-name">
+                <i class="fas fa-location-dot"></i>
+                <span>18th-Stout Station</span>
+              </div>
+              <div class="station-line-tags">
+                <span class="mini-tag tag-d">D</span>
+                <span class="mini-tag tag-f">F</span>
+                <span class="mini-tag tag-h">H</span>
+              </div>
+            </div>
+            <div class="location-details">
+              <span class="detail-pill"><i class="fas fa-person-walking"></i> 8 min. walk</span>
+              <span class="detail-distance">0.4 mi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Width Station: Theatre District / Convention Center -->
+        <div class="transport-row full-width-row station-card" data-lines="D,F,H">
+          <div class="location-info">
+            <div class="location-name">
+              <i class="fas fa-building-user"></i>
+              <span>Theatre District / Convention Center Station</span>
+            </div>
+            <div class="station-line-tags">
+              <span class="mini-tag tag-d">D Line</span>
+              <span class="mini-tag tag-f">F Line</span>
+              <span class="mini-tag tag-h">H Line</span>
+            </div>
+          </div>
+          <div class="location-details">
+            <span class="detail-pill"><i class="fas fa-person-walking"></i> 5 min. walk</span>
+            <span class="detail-distance">1.1 mi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AIRPORT SUB-SECTION -->
+      <div class="transport-group" style="margin-top: 2.2rem;">
+        <h3 class="group-subtitle"><i class="fas fa-plane-departure"></i> AIRPORT & UNION STATION</h3>
+
+        <div class="transport-row full-width-row airport-row station-card" data-lines="A">
+          <div class="location-info">
+            <div class="location-name">
+              <i class="fas fa-plane-up"></i>
+              <span>Denver International Airport (DEN) / A Line Train</span>
+            </div>
+            <div class="station-line-tags">
+              <span class="mini-tag tag-a">A Line (Airport Express)</span>
+            </div>
+          </div>
+          <div class="location-details">
+            <span class="detail-pill pill-drive"><i class="fas fa-car"></i> 34 min. drive</span>
+            <span class="detail-distance">23.9 mi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE RTD & LIGHT RAIL LINE FILTER -->
+      <div class="transit-lines-bar">
+        <span class="lines-title">Connected Light Rail Lines:</span>
+        <div class="line-badges">
+          <button class="line-filter-btn active" data-filter="all">All Lines</button>
+          <button class="line-filter-btn btn-d" data-filter="D">D Line</button>
+          <button class="line-filter-btn btn-f" data-filter="F">F Line</button>
+          <button class="line-filter-btn btn-h" data-filter="H">H Line</button>
+          <button class="line-filter-btn btn-rtd" data-filter="RTD">RTD Free MallRide</button>
+        </div>
+      </div>
+
+      <!-- LINE ROUTE DYNAMIC CALLOUT INFO BOX -->
+      <div class="line-info-box" id="line-info-box">
+        <i class="fas fa-circle-info"></i>
+        <span id="line-info-text">Click any Light Rail line button above to highlight matching stations and view route connections.</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+.transportation-section {
+  background-color: var(--bg-white);
+  padding: 5rem 0;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.title-with-underline {
+  position: relative;
+  display: inline-block;
+  color: var(--dark-navy);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  text-align: center;
+}
+
+.title-with-underline::after {
+  content: '';
+  display: block;
+  width: 140px;
+  height: 4px;
+  background: var(--primary-red);
+  margin: 0.8rem auto 0 auto;
+  border-radius: var(--border-radius-full);
+}
+
+.transport-box {
+  max-width: 940px;
+  margin: 0 auto;
+  background: #F8FAFC;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.group-subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--dark-navy);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.group-subtitle i {
+  color: var(--primary-red);
+}
+
+.transport-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.transport-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.4rem;
+  background: #FFFFFF;
+  border-radius: var(--border-radius-md);
+  border: 1.5px solid var(--border-light);
+  transition: all 0.25s ease;
+}
+
+.transport-row:hover,
+.transport-row.highlighted {
+  border-color: var(--primary-red);
+  box-shadow: 0 4px 14px rgba(214, 64, 80, 0.15);
+  transform: translateY(-2px);
+}
+
+.full-width-row {
+  margin-top: 1.2rem;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.location-name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--dark-navy);
+}
+
+.location-name i {
+  color: var(--primary-red);
+  font-size: 1.1rem;
+}
+
+.station-line-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 1.85rem;
+}
+
+.mini-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--border-radius-full);
+  color: #FFFFFF;
+}
+
+.tag-d { background: #E53935; }
+.tag-f { background: #FF9800; }
+.tag-h { background: #1E88E5; }
+.tag-a { background: #7B1FA2; }
+
+.location-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.detail-pill {
+  background: var(--primary-red-light);
+  color: var(--primary-red);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--border-radius-full);
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.pill-drive {
+  background: var(--secondary-teal-light);
+  color: #1565C0;
+}
+
+.detail-distance {
+  color: var(--text-muted);
+  font-weight: 500;
+  min-width: 50px;
+  text-align: right;
+}
+
+/* INTERACTIVE TRANSIT LINES BAR */
+.transit-lines-bar {
+  margin-top: 2.2rem;
+  padding-top: 1.6rem;
+  border-top: 1px dashed var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.lines-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+
+.line-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.line-filter-btn {
+  padding: 0.4rem 0.95rem;
+  border-radius: var(--border-radius-full);
+  font-weight: 800;
+  font-size: 0.82rem;
+  color: #FFFFFF;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: var(--dark-navy);
+}
+
+.line-filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.line-filter-btn.btn-d { background: #E53935; }
+.line-filter-btn.btn-f { background: #FF9800; }
+.line-filter-btn.btn-h { background: #1E88E5; }
+.line-filter-btn.btn-rtd { background: var(--dark-navy); }
+
+.line-filter-btn.active {
+  border-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(1, 33, 57, 0.25);
+}
+
+/* LINE ROUTE CALLOUT INFO BOX */
+.line-info-box {
+  margin-top: 1.2rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  padding: 0.85rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--dark-navy);
+  font-weight: 600;
+}
+
+.line-info-box i {
+  color: var(--primary-red);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .transport-grid-2col {
+    grid-template-columns: 1fr;
+  }
+  .transport-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .location-details {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .transport-box {
+    padding: 1.8rem 1.2rem;
+  }
+}
+</style>
+
+<script>
+  const filterBtns = document.querySelectorAll('.line-filter-btn');
+  const stations = document.querySelectorAll('.station-card');
+  const infoText = document.getElementById('line-info-text');
+
+  const lineInfoMap: Record<string, string> = {
+    all: 'Showing all transit stations connected to Candy Factory Coworking. Click any line badge below for specific route details.',
+    D: 'D Line (Red): Connects Littleton & South Metro directly to 16th-Stout, 16th-California, 18th & Theatre District (4-5 min walk).',
+    F: 'F Line (Orange): Connects RidgeGate Parkway & Denver Tech Center directly to 16th/18th Light Rail stations.',
+    H: 'H Line (Blue): Connects Nine Mile & Florida stations directly to Downtown 16th/18th Light Rail stations.',
+    RTD: 'RTD Free MallRide: Free zero-emission shuttles running every 3-5 mins along 16th St right outside Baur’s Building.'
+  };
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter') || 'all';
+
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (infoText && lineInfoMap[filter]) {
+        infoText.textContent = lineInfoMap[filter];
+      }
+
+      stations.forEach(station => {
+        const lines = station.getAttribute('data-lines') || '';
+        if (filter === 'all' || lines.includes(filter) || (filter === 'RTD' && lines.includes('D'))) {
+          station.classList.add('highlighted');
+        } else {
+          station.classList.remove('highlighted');
+        }
+      });
+    });
+  });
+</script>

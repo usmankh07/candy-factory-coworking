@@ -1,0 +1,281 @@
+---
+---
+<section class="section section-bg-light" id="matcher">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="heading-lg">Find Your Ideal Workspace Match</h2>
+      <p>Answer 2 quick questions to uncover the exact membership tier designed for your budget and productivity style.</p>
+    </div>
+
+    <div class="quiz-card">
+      <div class="quiz-steps-nav">
+        <div class="quiz-step-indicator active" id="step-indicator-1">1</div>
+        <div class="quiz-step-indicator" id="step-indicator-2">2</div>
+        <div class="quiz-step-indicator" id="step-indicator-3"><i class="fas fa-check"></i></div>
+      </div>
+
+      <!-- Question 1: Team Size -->
+      <div id="quiz-step-1">
+        <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--dark-navy);">How many people need space?</h3>
+        <div class="quiz-options-grid">
+          <button class="quiz-option-btn" data-quiz-team="solo">
+            <i class="fas fa-user"></i>
+            <h4>Just Myself</h4>
+            <p>Individual remote worker, freelancer, or sole consultant.</p>
+          </button>
+          <button class="quiz-option-btn" data-quiz-team="small">
+            <i class="fas fa-users"></i>
+            <h4>Small Team (2–5 People)</h4>
+            <p>Growing agency, boutique firm, or core startup crew.</p>
+          </button>
+          <button class="quiz-option-btn" data-quiz-team="large">
+            <i class="fas fa-building"></i>
+            <h4>Larger Team (6+ People)</h4>
+            <p>Expanding company needing dedicated private office suites.</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question 2: Work Style -->
+      <div id="quiz-step-2" style="display: none;">
+        <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--dark-navy);">What is your primary work style?</h3>
+        <div class="quiz-options-grid">
+          <button class="quiz-option-btn" data-quiz-style="flexible">
+            <i class="fas fa-laptop"></i>
+            <h4>Flexible & Mobile</h4>
+            <p>Drop in a few days a week, switch seats, and travel light.</p>
+          </button>
+          <button class="quiz-option-btn" data-quiz-style="dedicated">
+            <i class="fas fa-desktop"></i>
+            <h4>Permanent Dedicated Spot</h4>
+            <p>I need my own set desk, dual monitors, and lockable storage.</p>
+          </button>
+          <button class="quiz-option-btn" data-quiz-style="private">
+            <i class="fas fa-door-closed"></i>
+            <h4>Private Door & Quiet Space</h4>
+            <p>I require total confidentiality, team whiteboard space & acoustic privacy.</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Result Output -->
+      <div class="quiz-result-box" id="quiz-result-box">
+        <div class="badge-tag badge-teal" style="margin-bottom: 1rem;">Recommended Match</div>
+        <h3 id="quiz-result-title" class="heading-lg" style="color: #FFFFFF; margin-bottom: 0.5rem;">Dedicated Desk</h3>
+        <p id="quiz-result-price" style="font-size: 1.8rem; font-weight: 800; color: var(--secondary-teal); margin-bottom: 1rem;">$500 / month</p>
+        <p id="quiz-result-desc" style="max-width: 600px; margin: 0 auto 2rem auto; color: var(--text-dim);">Your permanent personal workspace with 24/7 access, filing cabinet, and monthly conference credits inside Baur's building.</p>
+        <button class="btn btn-primary btn-lg" data-open-modal="Quiz Match Recommendation">
+          Book Tour For This Space <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.quiz-card {
+  background: #FFFFFF;
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quiz-steps-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.quiz-steps-nav::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--border-light);
+  z-index: 0;
+}
+
+.quiz-step-indicator {
+  position: relative;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.quiz-step-indicator.active {
+  background: var(--primary-red);
+  border-color: var(--primary-red);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-red);
+}
+
+.quiz-step-indicator.completed {
+  background: var(--dark-navy);
+  border-color: var(--dark-navy);
+  color: #FFFFFF;
+}
+
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.quiz-option-btn {
+  background: #F8FAFC;
+  border: 2px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  padding: 1.8rem 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.quiz-option-btn:hover,
+.quiz-option-btn.selected {
+  border-color: var(--primary-red);
+  background: var(--primary-red-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-option-btn i {
+  font-size: 1.8rem;
+  color: var(--primary-red);
+}
+
+.quiz-option-btn h4 {
+  font-size: 1.1rem;
+  color: var(--dark-navy);
+}
+
+.quiz-option-btn p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.quiz-result-box {
+  display: none;
+  background: linear-gradient(135deg, var(--dark-navy) 0%, var(--dark-navy-surface) 100%);
+  color: #FFFFFF;
+  border-radius: var(--border-radius-md);
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.quiz-result-box.active {
+  display: block;
+  animation: fadeIn 0.4s ease-out;
+}
+</style>
+
+<script>
+  const teamBtns = document.querySelectorAll('[data-quiz-team]');
+  const workBtns = document.querySelectorAll('[data-quiz-style]');
+  const quizStep1 = document.getElementById('quiz-step-1');
+  const quizStep2 = document.getElementById('quiz-step-2');
+  
+  let selectedTeam = null;
+  let selectedStyle = null;
+
+  teamBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      teamBtns.forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedTeam = btn.getAttribute('data-quiz-team');
+      
+      setTimeout(() => {
+        if (quizStep1 && quizStep2) {
+          quizStep1.style.display = 'none';
+          quizStep2.style.display = 'block';
+          document.getElementById('step-indicator-2')?.classList.add('active');
+          document.getElementById('step-indicator-1')?.classList.remove('active');
+          document.getElementById('step-indicator-1')?.classList.add('completed');
+        }
+      }, 250);
+    });
+  });
+
+  workBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      workBtns.forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedStyle = btn.getAttribute('data-quiz-style');
+
+      setTimeout(() => {
+        if (quizStep2) quizStep2.style.display = 'none';
+        showResult(selectedTeam, selectedStyle);
+      }, 250);
+    });
+  });
+
+  function showResult(team, style) {
+    const resultBox = document.getElementById('quiz-result-box');
+    const resultTitle = document.getElementById('quiz-result-title');
+    const resultPrice = document.getElementById('quiz-result-price');
+    const resultDesc = document.getElementById('quiz-result-desc');
+
+    let rec = {
+      title: "Dedicated Desk Suite",
+      price: "$500 / month",
+      desc: "Your personal desk in our historic 2nd-floor workspace with 24/7 access, filing cabinet, and monthly meeting room credits."
+    };
+
+    if (team === 'solo') {
+      if (style === 'flexible') {
+        rec = {
+          title: "Flexible Hot Desk / Day Pass",
+          price: "$25 / day or $250 / mo",
+          desc: "Ideal for freelancers & remote workers needing high-speed fiber, specialty coffee, and vibrant community space."
+        };
+      } else {
+        rec = {
+          title: "Dedicated Desk",
+          price: "$500 / month",
+          desc: "Your permanent personal desk with lockable storage, ergonomic chair, and 24/7 access to the Baur's building."
+        };
+      }
+    } else if (team === 'small') {
+      rec = {
+        title: "3–5 Person Private Office",
+        price: "From $807 / month",
+        desc: "Fully furnished private suite in historic Denver CBD, complete with high-speed wifi, conference room hours, and custom branding."
+      };
+    } else {
+      rec = {
+        title: "Custom Corporate Suite / Event Space",
+        price: "From $1,200 / month",
+        desc: "Multi-room office suites and flexible event spaces designed to fit expanding teams and private corporate functions."
+      };
+    }
+
+    if (resultTitle && resultPrice && resultDesc && resultBox) {
+      resultTitle.textContent = rec.title;
+      resultPrice.textContent = rec.price;
+      resultDesc.textContent = rec.desc;
+      resultBox.classList.add('active');
+      document.getElementById('step-indicator-3')?.classList.add('active');
+    }
+  }
+</script>

@@ -1,0 +1,487 @@
+---
+---
+<div class="header-overlay-container">
+  <!-- TOP UTILITY BAR -->
+  <div class="top-utility-bar">
+    <div class="container">
+      <div class="top-utility-wrapper">
+        
+        <!-- Left: Phone Number & Address -->
+        <div class="top-contact-meta">
+          <a href="tel:3025219500" class="top-meta-item">
+            <i class="fas fa-phone-alt"></i> (302) 521-9500
+          </a>
+          <span class="meta-divider">|</span>
+          <a href="https://maps.google.com/?q=1514+Curtis+Street,+Suite+200,+Denver,+CO+80202" target="_blank" rel="noopener noreferrer" class="top-meta-item">
+            <i class="fas fa-map-marker-alt"></i> 1514 Curtis Street, Suite 200, Denver, CO 80202
+          </a>
+        </div>
+
+        <!-- Right: Social Icons -->
+        <div class="top-social-links">
+          <a href="https://www.facebook.com/CandyFactoryCoworking/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/candy_factory_coworking/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/candy-factory-coworking-denver/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN OVERLAY SITE HEADER WITH RED ACCENT DIVIDER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        
+        <!-- Official Logo Mark -->
+        <a href="#" class="brand-logo" aria-label="Candy Factory Coworking Homepage">
+          <img src="/images/official_user_logo.png" alt="Candy Factory Coworking Logo" class="header-logo-full">
+        </a>
+
+        <!-- Uppercase Navigation Menu -->
+        <nav class="nav-menu" id="nav-menu">
+          
+          <!-- 1. MEMBERSHIPS Dropdown -->
+          <div class="nav-item has-dropdown">
+            <a href="#spaces" class="nav-link">
+              MEMBERSHIPS <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#spaces" class="dropdown-item">
+                <i class="fas fa-users"></i> Teams
+              </a>
+              <a href="#spaces" class="dropdown-item">
+                <i class="fas fa-user"></i> Individuals
+              </a>
+              <a href="#promotions" class="dropdown-item">
+                <i class="fas fa-tags"></i> Current Specials
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. WHAT WE OFFER Dropdown -->
+          <div class="nav-item has-dropdown">
+            <a href="#spaces" class="nav-link">
+              WHAT WE OFFER <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#spotlight" class="dropdown-item">
+                <i class="fas fa-door-closed"></i> Private Office Suites
+              </a>
+              <a href="#spaces" class="dropdown-item">
+                <i class="fas fa-desktop"></i> Dedicated Desks
+              </a>
+              <a href="#spaces" class="dropdown-item">
+                <i class="fas fa-coffee"></i> Hot Desk / Day Pass
+              </a>
+              <a href="#spaces" class="dropdown-item">
+                <i class="fas fa-handshake"></i> Meeting & Conference Rooms
+              </a>
+              <a href="#spaces" class="dropdown-item">
+                <i class="fas fa-glass-cheers"></i> Event Space Rental
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. ABOUT US Dropdown -->
+          <div class="nav-item has-dropdown">
+            <a href="#history" class="nav-link">
+              ABOUT US <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#history" class="dropdown-item">
+                <i class="fas fa-landmark"></i> 1891 Baur's Building History
+              </a>
+              <a href="#amenities" class="dropdown-item">
+                <i class="fas fa-concierge-bell"></i> Building Amenities
+              </a>
+              <a href="#testimonials" class="dropdown-item">
+                <i class="fab fa-google"></i> Member Reviews
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. CONTACT / RESOURCES Dropdown -->
+          <div class="nav-item has-dropdown">
+            <a href="#location" class="nav-link">
+              CONTACT <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a href="#location" class="dropdown-item">
+                <i class="fas fa-route"></i> Location & Transit Guide
+              </a>
+              <a href="#faq" class="dropdown-item">
+                <i class="fas fa-question-circle"></i> FAQ
+              </a>
+            </div>
+          </div>
+
+        </nav>
+
+        <!-- Primary CTA Button: Red Solid Button -->
+        <div class="nav-actions">
+          <button class="btn btn-header-red" data-open-modal="Header Book Your Space">BOOK YOUR SPACE</button>
+        </div>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Red Horizontal Accent Divider Line -->
+    <div class="header-red-border"></div>
+  </header>
+</div>
+
+<style>
+/* CONTAINER OVERLAY WRAPPER */
+.header-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+}
+
+/* TOP UTILITY BAR STYLES */
+.top-utility-bar {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  color: var(--text-dim);
+  font-size: 0.84rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+}
+
+.top-utility-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-contact-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.top-meta-item {
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.top-meta-item i {
+  color: var(--primary-red);
+}
+
+.top-meta-item:hover {
+  color: #FFFFFF;
+}
+
+.meta-divider {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.top-social-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.top-social-links a {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  font-size: 0.95rem;
+}
+
+.top-social-links a:hover {
+  color: var(--primary-red);
+  transform: translateY(-1px);
+}
+
+/* MAIN HEADER STYLES */
+.site-header {
+  position: relative;
+  width: 100%;
+  transition: all var(--transition-normal);
+  padding: 1.2rem 0 0 0;
+  background: transparent;
+}
+
+.site-header.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 0 0 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  background: rgba(1, 33, 57, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 1000;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 0.8rem;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1005;
+}
+
+/* OFFICIAL USER LOGO IMAGE STYLE */
+.header-logo-full {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  filter: none !important;
+  transition: height var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: -18px;
+}
+
+.site-header.scrolled .header-logo-full {
+  height: 68px;
+  margin-bottom: -10px;
+}
+
+/* RED HORIZONTAL ACCENT DIVIDER LINE */
+.header-red-border {
+  width: 100%;
+  height: 3px;
+  background: var(--primary-red);
+  box-shadow: 0 2px 8px rgba(214, 64, 80, 0.4);
+}
+
+/* NAVIGATION MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.nav-item {
+  position: relative;
+  padding: 0.4rem 0;
+}
+
+.nav-link {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.dropdown-arrow {
+  font-size: 0.68rem;
+  transition: transform var(--transition-fast);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.has-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+  color: var(--primary-red);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2.5px;
+  background-color: var(--primary-red);
+  transition: width var(--transition-fast);
+}
+
+.nav-item:hover .nav-link::after {
+  width: 100%;
+}
+
+/* DROPDOWN MENU & HOVER BRIDGE */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  width: 240px;
+  background: #FFFFFF;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-light);
+  padding: 0.6rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  z-index: 1010;
+  margin-top: 12px;
+}
+
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: transparent;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-navy);
+  transition: all var(--transition-fast);
+}
+
+.dropdown-item i {
+  color: var(--primary-red);
+  width: 18px;
+  font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+  background: var(--primary-red-light);
+  color: var(--primary-red);
+  padding-left: 1.2rem;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* SOLID RED BUTTON */
+.btn-header-red {
+  background: var(--primary-red);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.4rem;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 4px 14px rgba(214, 64, 80, 0.4);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn-header-red:hover {
+  background: #C02B0A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(214, 64, 80, 0.6);
+  color: #FFFFFF;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .top-meta-item span,
+  .meta-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu, .nav-actions {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .top-utility-bar {
+    display: none;
+  }
+  .header-logo-full {
+    height: 60px;
+    margin-bottom: -10px;
+  }
+  .site-header {
+    padding: 0.6rem 0 0 0;
+  }
+}
+</style>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('site-header');
+    if (header) {
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+  });
+
+  const toggle = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isExpanded = menu.style.display === 'flex';
+      menu.style.display = isExpanded ? 'none' : 'flex';
+      if (!isExpanded) {
+        menu.style.flexDirection = 'column';
+        menu.style.position = 'absolute';
+        menu.style.top = '100%';
+        menu.style.left = '0';
+        menu.style.width = '100%';
+        menu.style.background = '#012139';
+        menu.style.padding = '1.5rem';
+        menu.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
+      }
+    });
+  }
+</script>

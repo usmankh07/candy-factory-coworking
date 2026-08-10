@@ -1,0 +1,98 @@
+---
+---
+<section class="section section-bg-dark" id="history">
+  <!-- Baur's Line Drawing Watermark Graphic -->
+  <div class="line-drawing-watermark"></div>
+
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-content">
+        <h2 class="heading-lg" style="color: #FFFFFF; margin-bottom: 1.2rem;">
+          Experience History & Creativity at Baur's Building
+        </h2>
+        <p style="color: var(--text-dim); margin-bottom: 1.2rem; font-size: 1.05rem;">
+          Originally built in 1891 as O.P. Baur's Confectionery, this historic building holds over a century of Denver craft and sweet memories. Baur's famous confections delighted generations—including inventing the ice cream soda!
+        </p>
+        <p style="color: var(--text-dim); margin-bottom: 1.8rem; font-size: 1.05rem;">
+          Today, Candy Factory Coworking preserves that rich heritage with exposed original brickwork, soaring wood beams, and warm natural light paired with ultra-fast gigabit fiber technology.
+        </p>
+        <div style="display: flex; gap: 1rem;">
+          <button class="btn btn-teal" data-open-modal="Historic Building Tour">Schedule Building Tour</button>
+        </div>
+      </div>
+
+      <div class="story-img-frame">
+        <img src="https://candyfactorycoworking.com/wp-content/uploads/2024/06/1512-1514-Curtis-St-Denver-CO-Baurs-Building-1-LargeHighDefinition.jpg" alt="Historic Baur's Building Exterior Denver">
+        <div class="story-badge">
+          <h5>1514 Curtis Street</h5>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Theatre District & Central Business District</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.section-bg-dark {
+  position: relative;
+  overflow: hidden;
+}
+
+.line-drawing-watermark {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background-image: url('https://candyfactorycoworking.com/wp-content/uploads/2020/02/Baurs-Line-Drawing.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.story-img-frame {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.story-img-frame img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.story-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.story-badge h5 {
+  color: var(--dark-navy);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

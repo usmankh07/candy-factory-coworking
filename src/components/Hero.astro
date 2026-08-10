@@ -1,0 +1,290 @@
+---
+---
+<section class="hero-section">
+  <!-- Full-width Background Photo with Dark Navy Overlay -->
+  <div class="hero-bg-overlay"></div>
+
+  <div class="container">
+    <div class="hero-grid">
+      
+      <!-- Left: Headline & Copy -->
+      <div class="hero-content">
+        <h1 class="heading-xl hero-title">
+          The Sweetest Coworking Space in <span class="text-gradient-red">Denver, CO</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Experience history and creativity at Candy Factory Coworking. Converted 1891 candy factory built for ambitious startups, creative teams, and remote professionals.
+        </p>
+
+        <!-- Current Special Promo Callout -->
+        <div class="hero-promo-badge">
+          <i class="fas fa-gift"></i>
+          <span><strong>Current Special:</strong> Free Month on Private Office Space with any 6-Month Lease!</span>
+        </div>
+
+        <div class="hero-trust-pills">
+          <div class="trust-pill"><i class="fas fa-bolt"></i> 100% Fiber Wifi</div>
+          <div class="trust-pill"><i class="fas fa-key"></i> 24/7 Keycard Access</div>
+          <div class="trust-pill"><i class="fas fa-coffee"></i> Craft Coffee & Tea</div>
+          <div class="trust-pill"><i class="fas fa-star"></i> 4.9★ Rated Space</div>
+        </div>
+      </div>
+
+      <!-- Right: Lead Form Card with Glassmorphism Overlay -->
+      <div class="hero-card-form">
+        <div class="form-header">
+          <h3>Claim Your Free 1-Day Pass</h3>
+          <p>Experience Denver's premier workspace for 1 full day on us ($25 value).</p>
+        </div>
+
+        <form id="hero-lead-form">
+          <div class="form-group">
+            <label class="form-label" for="hero-full-name">Full Name *</label>
+            <input type="text" id="hero-full-name" class="form-control" placeholder="e.g. Sarah Jenkins" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="hero-email">Work Email *</label>
+            <input type="email" id="hero-email" class="form-control" placeholder="sarah@company.com" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="hero-phone">Phone Number</label>
+              <input type="tel" id="hero-phone" class="form-control" placeholder="(303) 555-0199" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="hero-workspace-type">Space Needed</label>
+              <select id="hero-workspace-type" class="form-control">
+                <option value="Hot Desk">Hot Desk / Day Pass</option>
+                <option value="Dedicated Desk">Dedicated Desk ($500/mo)</option>
+                <option value="Private Office">Private Office (3-7 Seats)</option>
+                <option value="Meeting Room">Conference / Event Space</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            Claim Free Day Pass <i class="fas fa-arrow-right"></i>
+          </button>
+
+          <div class="form-guarantee">
+            <i class="fas fa-shield-alt"></i> Instant digital pass delivery
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.hero-section {
+  position: relative;
+  padding-top: 12rem;
+  padding-bottom: 6rem;
+  background-image: url('https://candyfactorycoworking.com/wp-content/uploads/2024/06/1512-1514-Curtis-St-Denver-CO-Baurs-Building-1-LargeHighDefinition.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(1, 33, 57, 0.93) 0%, rgba(1, 33, 57, 0.82) 60%, rgba(1, 33, 57, 0.9) 100%);
+  z-index: 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge-red-glow {
+  background: rgba(214, 64, 80, 0.2);
+  color: #FF7B88;
+  border: 1px solid rgba(214, 64, 80, 0.4);
+  backdrop-filter: blur(8px);
+  width: fit-content;
+}
+
+.hero-title {
+  color: #FFFFFF;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 90%;
+  line-height: 1.6;
+}
+
+.promo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(126, 190, 197, 0.15);
+  border: 1px solid rgba(126, 190, 197, 0.35);
+  backdrop-filter: blur(8px);
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--border-radius-md);
+  color: var(--secondary-teal);
+  font-size: 0.92rem;
+}
+
+.promo-pill i {
+  color: var(--primary-red);
+  font-size: 1.1rem;
+}
+
+.hero-trust-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.trust-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.trust-pill i {
+  color: var(--primary-red);
+}
+
+.hero-card-form {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  border-radius: var(--border-radius-lg);
+  padding: 2.2rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--dark-navy);
+}
+
+.form-header {
+  margin-bottom: 1.5rem;
+}
+
+.form-header h3 {
+  font-size: 1.4rem;
+  color: var(--dark-navy);
+  margin-bottom: 0.3rem;
+}
+
+.form-header p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark-navy);
+  margin-bottom: 0.4rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: var(--border-radius-sm);
+  border: 1.5px solid var(--border-light);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: #F8FAFC;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding-top: 10rem;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 5rem;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+  const heroForm = document.getElementById('hero-lead-form');
+  if (heroForm) {
+    heroForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = heroForm.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Reserving Pass...';
+      }
+
+      setTimeout(() => {
+        heroForm.innerHTML = `
+          <div style="text-align: center; padding: 2rem 0; color: var(--dark-navy);">
+            <div style="width: 60px; height: 60px; background: rgba(126, 190, 197, 0.2); border-radius: 50%; color: var(--primary-red); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1rem auto;">
+              <i class="fas fa-check"></i>
+            </div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Free Day Pass Claimed!</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Check your email inbox. We have sent your digital 1-Day Pass & instructions for your visit to Baur's Building.</p>
+          </div>
+        `;
+      }, 1200);
+    });
+  }
+</script>

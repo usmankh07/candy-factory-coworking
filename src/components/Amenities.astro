@@ -1,0 +1,169 @@
+---
+const amenities = [
+  {
+    icon: 'fas fa-wifi',
+    title: 'Gigabit Fiber WiFi',
+    desc: 'Symmetrical 1,000 Mbps high-speed internet with redundant backup networks for video conferencing.'
+  },
+  {
+    icon: 'fas fa-mug-hot',
+    title: 'Craft Coffee & Tea',
+    desc: 'Unlimited locally roasted coffee, specialty teas, cold drinks, and candy snacks in our kitchen.'
+  },
+  {
+    icon: 'fas fa-phone-alt',
+    title: 'Soundproof Phone Booths',
+    desc: 'Private acoustic pods for confidential client calls, podcasts, and uninterrupted Zoom meetings.'
+  },
+  {
+    icon: 'fas fa-tree',
+    title: 'Outdoor Patio Terrace',
+    desc: 'Take your laptop outside to work in fresh air on our private historic courtyard patio.'
+  },
+  {
+    icon: 'fas fa-dog',
+    title: 'Dog Friendly Space',
+    desc: 'Well-behaved furry companions are welcome to join you at your desk every work day.'
+  },
+  {
+    icon: 'fas fa-mail-bulk',
+    title: 'Mail & Address Handling',
+    desc: 'Professional business address at 1514 Curtis St, mail receipt, and secure package storage.'
+  },
+  {
+    icon: 'fas fa-key',
+    title: '24/7 Secure Access',
+    desc: 'Mobile keycard access allowing you to work early mornings, late nights, or weekends.'
+  },
+  {
+    icon: 'fas fa-glass-cheers',
+    title: 'Community Events',
+    desc: 'Monthly member happy hours, networking breakfasts, and curated professional workshops.'
+  }
+];
+---
+
+<section class="section amenities-section" id="amenities">
+  <div class="container">
+    
+    <!-- Clean Header -->
+    <div class="section-header">
+      <h2 class="heading-lg text-white">Everything Included in Your Membership</h2>
+      <p class="text-dim">No extra add-on fees. Every membership tier includes full access to our complete facility perks.</p>
+    </div>
+
+    <!-- Balanced Tight 4x2 Feature Grid -->
+    <div class="amenities-grid">
+      {amenities.map((item) => (
+        <div class="amenity-card">
+          <div class="amenity-icon">
+            <i class={item.icon}></i>
+          </div>
+          <div class="amenity-content">
+            <h4>{item.title}</h4>
+            <p>{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.amenities-section {
+  background: var(--dark-navy);
+  padding: 4.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.text-white {
+  color: #FFFFFF !important;
+}
+
+.text-dim {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* BALANCED 4x2 GRID - ZERO EMPTY GAPS */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.amenity-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--border-radius-md);
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.amenity-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(214, 64, 80, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.amenity-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(214, 64, 80, 0.12);
+  color: var(--primary-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.amenity-card:hover .amenity-icon {
+  background: var(--primary-red);
+  color: #FFFFFF;
+}
+
+.amenity-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.amenity-content h4 {
+  color: #FFFFFF;
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.amenity-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+  .amenity-card {
+    padding: 1.1rem 1.2rem;
+  }
+}
+</style>

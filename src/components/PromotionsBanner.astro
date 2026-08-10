@@ -1,0 +1,124 @@
+---
+---
+<section class="section promotions-section">
+  <div class="container">
+    <div class="promotions-grid">
+      
+      <!-- Promo Card 1: 6 Month Special -->
+      <div class="promo-banner-card card-red">
+        <div class="promo-icon"><i class="fas fa-gift"></i></div>
+        <div class="promo-info">
+          <span class="promo-tag">Limited Time Offer</span>
+          <h3>Free Month on Private Office Space with 6-Month Lease</h3>
+          <p>Sign a 6-month agreement for any private office suite and get your 1st month 100% free.</p>
+          <button class="btn btn-secondary btn-sm" data-open-modal="Free Month Lease Special">Claim Special Offer</button>
+        </div>
+      </div>
+
+      <!-- Promo Card 2: Refer 4 Rewards -->
+      <div class="promo-banner-card card-teal">
+        <div class="promo-icon"><i class="fas fa-users-line"></i></div>
+        <div class="promo-info">
+          <span class="promo-tag">Member Perk</span>
+          <h3>Refer 4 & Rewards Program</h3>
+          <p>Love working here? Refer fellow founders or colleagues and receive $100 account credit or free day passes!</p>
+          <button class="btn btn-secondary btn-sm" data-open-modal="Referral Program">Learn About Rewards</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.promotions-section {
+  padding: 3.5rem 0;
+  background: var(--bg-white);
+}
+
+.promotions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.promo-banner-card {
+  border-radius: var(--border-radius-lg);
+  padding: 2.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+
+.promo-banner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-red {
+  background: linear-gradient(135deg, rgba(214, 64, 80, 0.08) 0%, rgba(214, 64, 80, 0.02) 100%);
+  border: 1px solid rgba(214, 64, 80, 0.25);
+}
+
+.card-teal {
+  background: linear-gradient(135deg, rgba(126, 190, 197, 0.12) 0%, rgba(126, 190, 197, 0.03) 100%);
+  border: 1px solid rgba(126, 190, 197, 0.35);
+}
+
+.promo-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.card-red .promo-icon {
+  background: var(--primary-red);
+  color: #FFFFFF;
+}
+
+.card-teal .promo-icon {
+  background: var(--secondary-teal);
+  color: var(--dark-navy);
+}
+
+.promo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.promo-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-red);
+}
+
+.card-teal .promo-tag {
+  color: #1565C0;
+}
+
+.promo-info h3 {
+  font-size: 1.25rem;
+  color: var(--dark-navy);
+}
+
+.promo-info p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.promo-info .btn-sm {
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+</style>
