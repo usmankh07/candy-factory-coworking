@@ -396,10 +396,20 @@ const officeFaqs = [
 /* HERO SECTION STYLES */
 .office-hero {
   position: relative;
-  padding: 9rem 0 5.5rem 0;
+  padding: 12rem 0 6rem 0;
   background: var(--dark-navy);
   color: #FFFFFF;
   overflow: hidden;
+}
+
+.office-hero h1 {
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+}
+
+.office-hero h2,
+.office-hero h3 {
+  font-family: var(--font-heading);
 }
 
 .office-hero-bg {
@@ -505,38 +515,61 @@ const officeFaqs = [
   margin-bottom: 1.4rem;
 }
 
-.form-group {
+.hero-lead-form .form-group {
   margin-bottom: 1rem;
 }
 
-.form-input {
+.hero-lead-form .form-input {
   width: 100%;
   padding: 0.85rem 1rem;
-  border: 1px solid var(--border-light);
+  border: 1.5px solid var(--border-light);
   border-radius: var(--border-radius-sm);
+  font-family: var(--font-body);
   font-size: 0.95rem;
+  color: var(--text-dark);
+  background: #F8FAFC;
   outline: none;
   transition: border-color 0.25s ease;
 }
 
-.form-input:focus {
+.hero-lead-form .form-input:focus {
   border-color: var(--primary-red);
 }
 
-.btn-block {
-  width: 100%;
-}
-
-.form-guarantee {
+.hero-form-card .form-guarantee {
   text-align: center;
   font-size: 0.82rem;
   color: var(--text-muted);
   margin-top: 0.8rem;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
+}
+
+/* BUTTON VARIANTS NEEDED ON THIS PAGE */
+.btn-outline-light {
+  background: transparent;
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-header-red {
+  background: linear-gradient(135deg, var(--primary-red) 0%, #C02B0A 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-red);
+}
+
+.btn-header-red:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(214, 64, 80, 0.45);
+  background: linear-gradient(135deg, #E24A5C 0%, #D64050 100%);
 }
 
 /* VALUE PROPOSITION CARDS */
@@ -772,6 +805,14 @@ const officeFaqs = [
   letter-spacing: 0.05em;
 }
 
+.spotlight-content h2 {
+  color: #FFFFFF;
+}
+
+.spotlight-content p {
+  color: var(--text-dim);
+}
+
 .spotlight-perks {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -937,6 +978,9 @@ const officeFaqs = [
 }
 
 @media (max-width: 1024px) {
+  .office-hero {
+    padding-top: 10rem;
+  }
   .office-hero-content, .spotlight-grid {
     grid-template-columns: 1fr;
   }
@@ -948,6 +992,12 @@ const officeFaqs = [
   }
 }
 
+@media (max-width: 768px) {
+  .office-hero {
+    padding-top: 8rem;
+  }
+}
+
 @media (max-width: 650px) {
   .props-grid, .office-amenities-grid, .suites-grid {
     grid-template-columns: 1fr;
@@ -955,6 +1005,11 @@ const officeFaqs = [
   .hero-cta-group {
     flex-direction: column;
     align-items: stretch;
+  }
+  .hero-quick-features {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
   }
 }
 </style>
